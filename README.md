@@ -45,7 +45,7 @@ Run `ctest` to run the examples:
 ctest
 ```
 
-# to add another example
+# add another example
 
 Create a new source file from an existing one:
 
