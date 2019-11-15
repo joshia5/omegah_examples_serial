@@ -8,6 +8,8 @@ The following instructions apply to the SCOREC RedHat 7 systems with NVIDIA
 GPUs.  Specific instructions are given for Pascal GPUs (e.g., in the `blockade` and
 `pachisi` systems).
 
+## dependencies
+
 First build the dependencies for execution with the Kokkos backend using CUDA.
 
 Kokkos:
@@ -16,7 +18,7 @@ https://github.com/SCOREC/particle_structures/wiki/Building-and-Running-on-SCORE
 Omega_h:
 https://github.com/SCOREC/particle_structures/wiki/Building-and-Running-on-SCOREC-RHEL7#omega_h
 
-Then build `omegah_examples`.
+## omegah_examples
 
 Setup the environment.
 
