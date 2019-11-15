@@ -56,10 +56,10 @@ cp firstOrderAdjacency.cpp foo.cpp
 
 Add the new file to the build and test system cmake files:
 
-`testing.cmake` - execution commands for examples, copy the lines for the
-`firstOrderAdj_2D` to start with then modify as the new example is implemented
+`testing.cmake` - execution commands for examples, add `mpi_test(foo_2D 1 ./foo ${CMAKE_SOURCE_DIR}/meshes/tri8.osh)`
+to start with, then modify as the new example is implemented
 
-`CMakeLists.txt` - defines compile and link commands for examples
+`CMakeLists.txt` - defines compile and link commands for examples; add `example(foo foo.cpp)`
 
 Ensure that the new example compiles and runs:
 
