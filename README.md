@@ -35,7 +35,7 @@ Clone the repo, run cmake, then build.
 git clone git@github.com:SCOREC/omegah_examples.git
 mkdir build-ohExamples-pascal
 cd !$
-cmake ../kokkos -DCMAKE_CXX_COMPILER=mpicxx
+cmake ../omegah_examples -DCMAKE_CXX_COMPILER=mpicxx
 make
 ```
 
