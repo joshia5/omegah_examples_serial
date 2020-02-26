@@ -13,12 +13,18 @@ GPUs.  Specific instructions are given for Pascal GPUs (e.g., in the `blockade` 
 First build the dependencies for execution with the Kokkos backend using CUDA.
 
 Kokkos:
-https://github.com/SCOREC/particle_structures/wiki/Building-and-Running-on-SCOREC-RHEL7#kokkos
+https://github.com/SCOREC/pumi-pic/wiki/Building-and-Running-on-SCOREC-RHEL7#kokkos
 
 Omega_h:
-https://github.com/SCOREC/particle_structures/wiki/Building-and-Running-on-SCOREC-RHEL7#omega_h
+https://github.com/SCOREC/pumi-pic/wiki/Building-and-Running-on-SCOREC-RHEL7#omega_h
 
-## omegah_examples
+Alternatively, for debugging purposes you can build Omega_h in serial without kokkos:
+
+https://github.com/SCOREC/pumi-pic/wiki/Building-and-Running-on-SCOREC-RHEL7#building-omega_h-in-serial-for-debugging
+
+Note, you'll still need to set `export oh=/path/to/omega_h/install` accordingly for the `omegah_examples` build.
+
+## omegah_examples - cuda build
 
 Setup the environment.
 
@@ -44,6 +50,35 @@ Run `ctest` to run the examples:
 ```
 ctest
 ```
+
+## omegah_examples - serial build
+
+Setup the environment.
+
+```
+module load gcc mpich cmake 
+# use the environment variable set in the omega_h build
+export CMAKE_PREFIX_PATH=$oh:$CMAKE_PREFIX_PATH
+```
+
+Clone the repo, run cmake, then build.
+
+```
+git clone git@github.com:SCOREC/omegah_examples.git
+mkdir build-ohExamples-serial
+cd !$
+cmake ../omegah_examples -DCMAKE_CXX_COMPILER=g++
+make
+```
+
+Run `ctest` to run the examples:
+
+```
+ctest
+```
+
+Note, any example using MPI will not compile. 
+
 
 # add another example
 
