@@ -56,7 +56,7 @@ ctest
 Setup the environment.
 
 ```
-module load gcc mpich cmake 
+module load gcc cmake 
 # use the environment variable set in the omega_h build
 export CMAKE_PREFIX_PATH=$oh:$CMAKE_PREFIX_PATH
 ```
