@@ -30,4 +30,6 @@ function(example exename srcname)
 endfunction(example)
 
 example(firstOrderAdjacency firstOrderAdjacency.cpp)
+example(inversion inversion.cpp)
+example(transition transition.cpp)
 include(testing.cmake)
