@@ -29,7 +29,7 @@ function(example exename srcname)
   target_link_libraries(${exename} Omega_h::omega_h)
 endfunction(example)
 
-example(firstOrderAdjacency firstOrderAdjacency.cpp)
 example(inversion inversion.cpp)
 example(transition transition.cpp)
+example(hypercube hypercube.cpp)
 include(testing.cmake)
